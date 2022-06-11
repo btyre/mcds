@@ -7,7 +7,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  background-color: rgb(235, 180, 180);
+  background-color: rgb(201, 201, 201);
   border-radius: 15px;
   font-family: "Poppins";
 }
@@ -34,8 +34,9 @@ body {
 .card1 {
   display: flex;
   flex-direction: row-reverse;
-  padding: 20px;
-  height: 120px;
+
+  padding: 10px;
+  height: 100px;
   border-bottom: 2px dotted black;
 }
 
@@ -49,27 +50,17 @@ body {
 
 .question {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
+  align-items: center;
   margin-left: 50px;
-}
-
-.icons {
-  display: flex;
-  flex-direction: column;
-
-  align-items: flex-start;
-  border: solid gray 2px;
 }
 
 /* .wrapper:last-of-type {
   margin-bottom: 48px;
 } */
 
-.radio {
-  display: flex;
-  /* flex-flow: row flex-end; */
-  width: 20px;
-  size: 1.5em;
+input[type="radio"] {
+  transform: scale(1.5);
 }
 
 #radioset1 {
@@ -77,22 +68,18 @@ body {
 }
 
 .mcds {
-  /* display: flex; */
-  flex-direction: row;
-  width: 40px;
-  padding: 20px;
-  background: no-repeat url("../McDs_Quiz/img/McDs_Group.png");
-  background-size: 80%;
+  width: 80px;
+  padding: 10px;
+  background: no-repeat left/60% url("../McDs_Quiz/img/McDs_Group.png");
+
   /* background-size: auto; */
 }
 
 .no-mcds {
-  /* display: flex; */
-  display: block;
-  width: 40px;
-  padding: 20px;
-  background: no-repeat  url("../McDs_Quiz/img/McDs_No_Group.png");
-  background-size: 80%;
+  width: 80px;
+  padding: 10px;
+  background: no-repeat left/60% url("../McDs_Quiz/img/McDs_No_Group.png");
+  /* background-size: 80%; */
 }
 
 button {
