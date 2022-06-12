@@ -2,45 +2,46 @@
 var a = [];
 
 // initialize a counting variable
-var t = 0;
+var n = 0;
 
 // get the number of radio forms
-var l = $(".radios").length;
+var l = $("radios").length;
 
 // function to reset the quiz
 function clearRadios() {
   $('input[type="radio"]').prop("checked", false);
   a.length = 0;
-  t = 0;
+  n = 0;
 }
 
 // event handler for the first set of radios
-$("#radioset1").change(function () {
+$("#mcds").change(function () {
   // add the checked radio value to the array at the first position
-  a.splice(0, 1, $('#radioset1 input[type="radio"]:checked').val());
+  a.splice(0, 1, $('#mcds input[type="radio"]:checked').val());
 });
+console.log(n);
 
-// event handler for the second set of radios
-$("#radioset2").change(function () {
-  // add the checked radio value to the array at the second position
-  a.splice(1, 1, $('#radioset2 input[type="radio"]:checked').val());
-});
+// // event handler for the second set of radios
+// $("#radioset2").change(function () {
+//   // add the checked radio value to the array at the second position
+//   a.splice(1, 1, $('#radioset2 input[type="radio"]:checked').val());
+// });
 
-// event handler for the third set of radios
-$("#radioset3").change(function () {
-  // add the checked radio value to the array at the third position
-  a.splice(2, 1, $('#radioset3 input[type="radio"]:checked').val());
-});
-// event handler for the third set of radios
-$("#radioset4").change(function () {
-  // add the checked radio value to the array at the third position
-  a.splice(3, 1, $('#radioset4 input[type="radio"]:checked').val());
-});
-// event handler for the third set of radios
-$("#radioset5").change(function () {
-  // add the checked radio value to the array at the third position
-  a.splice(4, 1, $('#radioset5 input[type="radio"]:checked').val());
-});
+// // event handler for the third set of radios
+// $("#radioset3").change(function () {
+//   // add the checked radio value to the array at the third position
+//   a.splice(2, 1, $('#radioset3 input[type="radio"]:checked').val());
+// });
+// // event handler for the third set of radios
+// $("#radioset4").change(function () {
+//   // add the checked radio value to the array at the third position
+//   a.splice(3, 1, $('#radioset4 input[type="radio"]:checked').val());
+// });
+// // event handler for the third set of radios
+// $("#radioset5").change(function () {
+//   // add the checked radio value to the array at the third position
+//   a.splice(4, 1, $('#radioset5 input[type="radio"]:checked').val());
+// });
 
 
 // compile the results
@@ -51,7 +52,7 @@ $(".see-results").click(function () {
   // a value equals 'True'
   for (var i = 0; i < a.length; i++) {
     if (a[i] === "True") {
-      t++;
+      n++;
     }
   }
 
@@ -60,7 +61,7 @@ $(".see-results").click(function () {
   // by the number of 'True' values - stored in var t
   // divide this number by 100 and process it through Math.round to get
   // a number for displaying percentages
-  $(".score").text(Math.round((t / l) * 100) + "%");
+  $(".score").text(Math.round((n / l) * 100) + "%");
 
   // clear the form when done printing the calculation
   clearRadios();

@@ -1,27 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  width: 50%;
+  width: 100%;
   margin: auto;
   padding: 48px 0;
+  font-family: "Poppins";
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  max-width: 1200px;
   background-color: rgb(222, 222, 222);
   border-radius: 15px;
-  font-family: "Poppins";
-  flex-wrap: nowrap;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
 }
 
 .header {
-  position: relative;
-  /* align-self: center; */
+  width: 1200px;
   padding: 10px;
   border-radius: 10px 10px 0 0;
   text-align: center;
-
   background-color: rgb(122, 122, 122);
 
 }
@@ -34,49 +37,71 @@ body {
 
 .card1 {
   display: flex;
+  width: 1200px;
   padding: 10px;
-  height: 100px;
   border-bottom: 2px dotted black;
   background: #fff;
 }
-
 .card2 {
   display: flex;
+  width: 1200px;
   padding: 10px;
-  height: 100px;
   border-bottom: 2px dotted black;
+  background: rgb(141, 141, 141);
 }
 
-.icons {
+
+
+.question-area {
   display: flex;
-  flex-direction: column;
-  width: 174px;
-  height: 108px;
+  margin: 0 auto;
 }
 
 .question {
-  display: flex;
-  width: 600px;
+  max-width: 80%;
   align-self: center;
-  padding: 10px;
-  position: relative;
-  left: 1em;
+
 
 }
 
 
 .card1-selector {
-  position: relative;
+  margin-top: 5px;
+  display: flex;
+  width: 140px;
+  height: 45px;
 }
 
 .card1-selector input {
-
   margin: 0;
   padding: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
+
+
+.card1-selector input:active+.mcds-group {
+  opacity: .9;
+}
+
+.card1-selector input:active+.no-mcds-group {
+  opacity: .9;
+}
+
+.card1-selector input:checked+.mcds-group {
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+
+.card1-selector input:checked+.no-mcds-group {
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+
+
 
 .mcds {
   background-image: url(../McDs_Quiz/img/McDs_Group.png);
@@ -87,28 +112,11 @@ body {
 }
 
 
-.card1-selector input:active+.mcds-group {
-  opacity: .9;
-}
-
-.card1-selector input:checked+.mcds-group {
-  -webkit-filter: none;
-  -moz-filter: none;
-  filter: none;
-}
-
-
-
 .mcds-group {
-  position: relative;
-  bottom: 1em;
-
+  width: 55px;
   cursor: pointer;
-  background-size: 60%;
+  background-size: 100%;
   background-repeat: no-repeat;
-  display: block;
-  width: 80px;
-  height: 70px;
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
@@ -118,14 +126,11 @@ body {
 }
 
 .no-mcds-group {
-  position: relative;
-  top: -3.8em;
+  width: 55px;
+  margin-left: 15px;
   cursor: pointer;
-  background-size: 60%;
+  background-size: 100%;
   background-repeat: no-repeat;
-  display: block;
-  width: 80px;
-  height: 70px;
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
@@ -133,6 +138,8 @@ body {
   -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
   filter: brightness(1.8) grayscale(1) opacity(.7);
 }
+
+
 
 .mcds-group:hover {
   -webkit-filter: brightness(1) grayscale(.5) opacity(0.9);
@@ -144,6 +151,23 @@ body {
   -webkit-filter: brightness(1) grayscale(.5) opacity(0.9);
   -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
   filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+button {
+  cursor: pointer;
+  margin-top: 60px;
+  align-self: center;
+  border: #ffcc00 solid 5px;
+  border-radius: 15px;
+  width: 160px;
+  height: 60px;
+  font-size: x-large;
+}
+
+.score {
+  border: #ffcc00 dashed 8px;
+  width: 80px;
+  height: 90px;
 }
 
 /* Extras */
@@ -208,23 +232,10 @@ p {
   background: no-repeat left/60% url("../McDs_Quiz/img/McDs_No_Group.png");
 } */
 
-button {
-  cursor: pointer;
-  align-self: center;
-  border: #ffcc00 solid 5px;
-  border-radius: 15px;
-  width: 100px;
-  height: 60px;
-}
-
-.score {
-  border: #ffcc00 dashed 8px;
-  width: 80px;
-  height: 90px;
-}
 
 
-@media(max-width: 768px) {
+
+/* @media(max-width: 768px) {
   .container {
     text-align: center;
     width: auto;
@@ -244,7 +255,9 @@ button {
 
   .question {
     font-size: 10px;
+    text-align: center;
+
 
 
   }
-}
+} */
