@@ -1,117 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
-      integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>McDs Quiz</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+    integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
 
-  <body>
-    <div class="container">
-      <div class="header">
-        <div class="title">To McD's or NOT to McD's</div>
-      </div>
-      <div class="card1">
-        <div class="question">
-          Customer needs ETA or Status of Service call (this should be escalated
-          to the dispatcher or the SP Services Mgr FSS.
-        </div>
+  <title>McDs Quiz</title>
+</head>
 
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">To McD's or NOT to McD's</div>
+    </div>
+
+
+    <div class="card1">
+      <div class="icons">
         <div class="mcds"></div>
         <div class="no-mcds"></div>
-
         <label for="radioset1"></label>
         <form id="radioset1" class="radios">
-          <input type="radio" name="set1" value="True" /> True
-          <input type="radio" name="set1" value="False" /> False
-        </form>
       </div>
 
-      <div class="card2">
-        <div class="question">
-          Customer doesn’t want to be charged for service. If customer refuses
-          to let you issue the service call, refer them to a Service Support
-          Specialist and they can explain to them how our process works.
-        </div>
 
-        <div class="mcds"></div>
-        <div class="no-mcds"></div>
+      <input type="radio" name="set1" value="True" />
+      <input type="radio" name="set1" value="False" />
 
-        <label for="radioset2"></label>
-        <form id="radioset2" class="radios">
-          <input type="radio" name="set1" value="True" /> True
+      </form>
 
-          <input type="radio" name="set1" value="False" /> False
-        </form>
+      <div class="question">
+        Customer needs ETA or Status of Service call (this should be escalated
+        to the dispatcher or the SP Services Mgr FSS.
+
+
       </div>
-
-      <div class="card1">
-        <div class="question">
-          Customer needs ETA or Status of Service call (this should be escalated
-          to the dispatcher or the SP Services Mgr FSS.
-        </div>
-
-        <div class="mcds"></div>
-        <div class="no-mcds"></div>
-        <label for="radioset3"></label>
-        <form id="radioset3" class="radios">
-          <input type="radio" name="set1" value="True" /> True
-          <input type="radio" name="set1" value="False" /> False
-        </form>
-      </div>
-
-      <div class="card2">
-        <div class="question">
-          Customer doesn’t want to be charged for service. If customer refuses
-          to let you issue the service call, refer them to a Service Support
-          Specialist and they can explain to them how our process works.
-        </div>
-        <div class="mcds"></div>
-        <div class="no-mcds"></div>
-        <label for="radioset4"></label>
-        <form id="radioset4" class="radios">
-          <input type="radio" name="set1" value="True" /> True
-
-          <input type="radio" name="set1" value="False" /> False
-        </form>
-      </div>
-
-      <div class="card1">
-        <div class="question">
-          Customer needs ETA or Status of Service call (this should be escalated
-          to the dispatcher or the SP Services Mgr FSS.
-        </div>
-
-        <div class="mcds"></div>
-        <label for="radioset5"></label>
-        <form id="radioset5" class="radios">
-          <input type="radio" name="set1" value="True" /> True
-          <input type="radio" name="set1" value="False" /> False
-        </form>
-      </div>
-
-      <button class="see-results">See Results</button>
-      <div class="score"></div>
     </div>
-    <script src="main.js"></script>
-  </body>
+
+    <div class="card2">
+
+      <div class="icons">
+        <div class="mcds"></div>
+        <div class="no-mcds"></div>
+        <label for="radioset1"></label>
+        <form id="radioset1" class="radios">
+      </div>
+
+      <input type="radio" name="set1" value="True" />
+      <input type="radio" name="set1" value="False" />
+      </form>
+
+      <div class="question">
+        Troubleshooting problems such as …. Equipment not working or dispensing, water line broke and is flooding store.
+        Coke or any other flavor is not dispensing, or no water is dispensing. ABS equipment wont’ grab cups.
+
+      </div>
+    </div>
+
+
+
+
+
+    <button class="see-results">See Results</button>
+    <div class="score"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
 </html>
