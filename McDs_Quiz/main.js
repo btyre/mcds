@@ -31,6 +31,16 @@ $("#radioset3").change(function () {
   // add the checked radio value to the array at the third position
   a.splice(2, 1, $('#radioset3 input[type="radio"]:checked').val());
 });
+// event handler for the third set of radios
+$("#radioset4").change(function () {
+  // add the checked radio value to the array at the third position
+  a.splice(3, 1, $('#radioset4 input[type="radio"]:checked').val());
+});
+// event handler for the third set of radios
+$("#radioset5").change(function () {
+  // add the checked radio value to the array at the third position
+  a.splice(4, 1, $('#radioset5 input[type="radio"]:checked').val());
+});
 
 
 // compile the results
