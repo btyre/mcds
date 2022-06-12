@@ -60,11 +60,17 @@ body {
   align-self: center;
   padding: 10px;
   position: relative;
-  right: 5em;
+  left: 1em;
 
 }
 
+
+.card1-selector {
+  position: relative;
+}
+
 .card1-selector input {
+
   margin: 0;
   padding: 0;
   -webkit-appearance: none;
@@ -82,17 +88,20 @@ body {
 
 
 .card1-selector input:active+.mcds-group {
-  opacity: 1;
+  opacity: .9;
 }
 
-.card1-selector input:checked+.drinkcard-cc {
+.card1-selector input:checked+.mcds-group {
   -webkit-filter: none;
   -moz-filter: none;
   filter: none;
 }
 
+
+
 .mcds-group {
-  display: flex;
+  position: relative;
+  bottom: 1em;
 
   cursor: pointer;
   background-size: 60%;
@@ -108,7 +117,30 @@ body {
   filter: brightness(1.8) grayscale(1) opacity(.7);
 }
 
+.no-mcds-group {
+  position: relative;
+  top: -3.8em;
+  cursor: pointer;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  display: block;
+  width: 80px;
+  height: 70px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+  -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+  filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+
 .mcds-group:hover {
+  -webkit-filter: brightness(1) grayscale(.5) opacity(0.9);
+  -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+  filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.no-mcds-group:hover {
   -webkit-filter: brightness(1) grayscale(.5) opacity(0.9);
   -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
   filter: brightness(1.2) grayscale(.5) opacity(.9);
