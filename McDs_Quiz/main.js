@@ -31,14 +31,7 @@ $("#radioset3").change(function () {
   // add the checked radio value to the array at the third position
   a.splice(2, 1, $('#radioset3 input[type="radio"]:checked').val());
 });
-$("#radioset4").change(function () {
-  // add the checked radio value to the array at the third position
-  a.splice(3, 1, $('#radioset4 input[type="radio"]:checked').val());
-});
-$("#radioset5").change(function () {
-  // add the checked radio value to the array at the third position
-  a.splice(3, 1, $('#radioset5 input[type="radio"]:checked').val());
-});
+
 
 // compile the results
 
@@ -65,6 +58,6 @@ $(".see-results").click(function () {
 
 // Notes
 
-// 1. the splice() method is used to add an item to the array at a specific position; remember, array values start at 0; so, to add a value to the first position of an array, you have to specify 0; to add a value to the third position, you have to specifiy 2
+// 1. the splice() method is used to add an item to the array at a specific position; remember, array values start at 0; so, to add a value to the first position of an array, you have to specify 0; to add a value to the third position, you have to specify 2
 
 // 2. the second number in the splice() method - 1 - tells the function to delete the previous value at this array position; this is done so that if the user goes back and forth, clicking on true and false within the same radio form, we only capture the last value checked
