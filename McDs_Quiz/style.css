@@ -52,43 +52,23 @@ body {
 }
 
 
-
 .question-area {
   display: flex;
-  margin: 0 auto;
+  margin-left: 80px;
+
 }
 
 .question {
   max-width: 80%;
   align-self: center;
-
-
 }
 
-[type=radio] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
 
-[type=radio]+img {
-  cursor: pointer;
-}
-
-[type=radio]:checked+img {
+.selected_img {
   outline: 5px solid rgb(0, 234, 23);
 }
 
-.images .images2 {
-  width: 80px;
-  margin: 0 auto;
-}
 
-.images .images2 {
-  width: 80px;
-  margin: 0 auto;
-}
 
 .mcds {
   background-image: url(../McDs_Quiz/img/McDs_Group.png);
@@ -128,6 +108,20 @@ a {
 
 p {
   margin-bottom: .3em;
+}
+
+.image_group {
+  display: flex;
+  column-gap: 12px;
+}
+
+.image_item {
+  cursor: pointer;
+}
+
+.image_item.img {
+  /* object-fit: fill; */
+
 }
 
 
