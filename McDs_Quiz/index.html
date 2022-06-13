@@ -23,32 +23,39 @@
       <div class="title">To McD's or NOT to McD's</div>
     </div>
 
-    <div class="card1">
+    <div id="list">
+      <div class="card1">
 
+        <label class="images">
+          <input type="radio" name="test" value="small" checked>
+          <img src="../McDs_Quiz/img/McDs_Group.png">
+        </label>
+        <label class="images">
+          <input type="radio" name="test" value="big" checked>
+          <img src="../McDs_Quiz/img/McDs_No_Group.png">
+        </label>
 
-      <div class="card1-selector">
-        <input id="mcds" type="radio" name="mcdonalds" value="mcds" />
-        <label class="mcds-group mcds" for="mcds"></label>
-        <input id="no-mcds" type="radio" name="no-mcdonalds" value="no-mcds" />
-        <label class="no-mcds-group no-mcds" for="no-mcdonalds"></label>
+        <div class="question-area">
+          <p class="question"> Customer needs ETA or Status of Service call (this should be escalated
+            to the dispatcher or the SP Services Mgr FSS.</p>
+        </div>
       </div>
-      <div class="question-area">
-        <p class="question"> Customer needs ETA or Status of Service call (this should be escalated
-          to the dispatcher or the SP Services Mgr FSS.</p>
-      </div>
-    </div>
-    <div class="card">
 
+      <div class="card2">
 
-      <div class="card1-selector">
-        <input id="mcds" type="radio" name="mcdonalds" value="mcds" />
-        <label class="mcds-group mcds" for="mcds"></label>
-        <input id="no-mcds" type="radio" name="no-mcdonalds" value="no-mcds" />
-        <label class="no-mcds-group no-mcds" for="no-mcdonalds"></label>
-      </div>
-      <div class="question-area">
-        <p class="question"> Customer needs ETA or Status of Service call (this should be escalated
-          to the dispatcher or the SP Services Mgr FSS.</p>
+        <label class="images2">
+          <input type="radio" name="test" value="small" checked>
+          <img src="../McDs_Quiz/img/McDs_Group.png">
+        </label>
+        <label class="images2">
+          <input type="radio" name="test" value="big" checked>
+          <img src="../McDs_Quiz/img/McDs_No_Group.png">
+        </label>
+
+        <div class="question-area">
+          <p class="question"> Needing Service (water leaking, no syrup dispensing, drinks are flat/warm, ABS not
+            working, OJ not working etc).</p>
+        </div>
       </div>
     </div>
 
@@ -67,7 +74,7 @@
 
         </form> -->
 
-    <button class="see-results">See Results</button>
+    <button class="see-results" ondblclick="computeResults()">See Results</button>
     <div class="score"></div>
 
   </div>

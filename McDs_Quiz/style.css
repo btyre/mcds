@@ -42,12 +42,13 @@ body {
   border-bottom: 2px dotted black;
   background: #fff;
 }
+
 .card2 {
   display: flex;
   width: 1200px;
   padding: 10px;
   border-bottom: 2px dotted black;
-  background: rgb(141, 141, 141);
+  background: rgb(203, 203, 203);
 }
 
 
@@ -64,44 +65,30 @@ body {
 
 }
 
-
-.card1-selector {
-  margin-top: 5px;
-  display: flex;
-  width: 140px;
-  height: 45px;
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.card1-selector input {
-  margin: 0;
-  padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+[type=radio]+img {
+  cursor: pointer;
 }
 
-
-.card1-selector input:active+.mcds-group {
-  opacity: .9;
+[type=radio]:checked+img {
+  outline: 5px solid rgb(0, 234, 23);
 }
 
-.card1-selector input:active+.no-mcds-group {
-  opacity: .9;
+.images .images2 {
+  width: 80px;
+  margin: 0 auto;
 }
 
-.card1-selector input:checked+.mcds-group {
-  -webkit-filter: none;
-  -moz-filter: none;
-  filter: none;
+.images .images2 {
+  width: 80px;
+  margin: 0 auto;
 }
-
-.card1-selector input:checked+.no-mcds-group {
-  -webkit-filter: none;
-  -moz-filter: none;
-  filter: none;
-}
-
-
 
 .mcds {
   background-image: url(../McDs_Quiz/img/McDs_Group.png);
@@ -111,47 +98,6 @@ body {
   background-image: url(../McDs_Quiz/img/McDs_No_Group.png);
 }
 
-
-.mcds-group {
-  width: 55px;
-  cursor: pointer;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-  -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-  filter: brightness(1.8) grayscale(1) opacity(.7);
-}
-
-.no-mcds-group {
-  width: 55px;
-  margin-left: 15px;
-  cursor: pointer;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-  -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-  filter: brightness(1.8) grayscale(1) opacity(.7);
-}
-
-
-
-.mcds-group:hover {
-  -webkit-filter: brightness(1) grayscale(.5) opacity(0.9);
-  -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-  filter: brightness(1.2) grayscale(.5) opacity(.9);
-}
-
-.no-mcds-group:hover {
-  -webkit-filter: brightness(1) grayscale(.5) opacity(0.9);
-  -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-  filter: brightness(1.2) grayscale(.5) opacity(.9);
-}
 
 button {
   cursor: pointer;
