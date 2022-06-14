@@ -50,14 +50,14 @@ let questions = [
     text: 'Troubleshooting problems such as... Equipment not working or dispensing, water line broke and is flooding store. Coke or any other flavor is not dispensing, or no water is dispensing.'
   },
   {
-    correct: 1,
+    correct: 2,
     selected: null,
     text: 'Customer received part(s) and needs tech to return to install it or finish job.'
   },
   {
     correct: 1,
     selected: null,
-    text: 'Customer wants to know how many credits they have left. (MCDS earns labor credits for how much bulk syrup they sell, per year)'
+    text: 'Customer wants to know how many credits they have left.'
   },
   {
     correct: 1,
@@ -75,9 +75,9 @@ let questions = [
     text: 'Customer request service on a specific day. '
   },
   {
-    correct: 1,
+    correct: 2,
     selected: null,
-    text: 'Customer needs to replace their equipment, not parts. '
+    text: 'Needing Service (water leaking, no syrup dispensing, drinks are flat/warm, ABS not working, OJ not working etc)'
   },
   {
     correct: 1,
@@ -90,12 +90,58 @@ let questions = [
     text: 'Customer wants to know if they are on auto-ship for filters.    '
   },
   {
+    correct: 2,
+    selected: null,
+    text: 'Customer doesn’t want to be charged for service. If customer refuses to let you issue the service call, refer them to a Service Support Specialist and they can explain to them how our process works.'
+  },
+  {
     correct: 1,
     selected: null,
-    text: 'Customer wants to know if they are on auto-ship for filters.    '
+    text: 'Customer wants to know when their QMC is scheduled.    '
+  },
+  {
+    correct: 1,
+    selected: null,
+    text: 'Customer needs major line replacements, such as water or syrup(Python)   '
+  },
+  {
+    correct: 2,
+    selected: null,
+    text: 'Customer wants to dispute a bill or invoice.'
+
+  },
+  {
+    correct: 2,
+    selected: null,
+    text: 'Customer needs to Order a Part.'
+
+  },
+  {
+    correct: 1,
+    selected: null,
+    text: 'Customer wants to schedule a QMC'
+
   },
 
 ];
+
+
+
+function clickCorrect(event) {
+  console.log('clickCorrect', event);
+  event.target.classList.add('grgrg');
+}
+
+function clickWrong(event) {
+  console.log('clickWrong');
+}
+
+
+function results() {
+  computeResults();
+  showRestart();
+
+}
 
 function computeResults() {
   let scoreCorrect = 0;
@@ -107,16 +153,17 @@ function computeResults() {
   });
   console.log(scoreCorrect);
   let total = (scoreCorrect / questions.length) * 100;
-  document.getElementById('score').innerHTML = `${total}%`;
+  document.getElementById('score').innerHTML = `${(Math.round(total))}%`;
 }
 
-function clickCorrect(event) {
-  console.log('clickCorrect', event);
-  event.target.classList.add('grgrg');
+
+function refresh() {
+  window.location.reload("Refresh")
+  return false;
 }
 
-function clickWrong(event) {
-  console.log('clickWrong');
+function showRestart() {
+  document.querySelector('.refresh').style.display = "block";
 }
 
 

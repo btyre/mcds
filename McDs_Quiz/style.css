@@ -9,19 +9,22 @@ body {
   margin: auto;
   padding: 48px 0;
   font-family: "Poppins";
+  background-color: white;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
-  background-color: rgb(222, 222, 222);
+  max-width: 1000px;
+  background-color: rgb(122, 122, 122);
   border-radius: 15px;
+  border-left: rgb(122, 122, 122) solid 3px;
+  border-right: rgb(122, 122, 122) solid 3px;
   margin: 0 auto;
 }
 
 .header {
-  width: 1200px;
+  width: auto;
   padding: 10px;
   border-radius: 10px 10px 0 0;
   text-align: center;
@@ -37,7 +40,7 @@ body {
 
 .card1 {
   display: flex;
-  width: 1200px;
+  width: auto;
   padding: 10px;
   border-bottom: 2px dotted black;
   background: #fff;
@@ -45,7 +48,7 @@ body {
 
 .card2 {
   display: flex;
-  width: 1200px;
+  width: 1000px;
   padding: 10px;
   border-bottom: 2px dotted black;
   background: rgb(203, 203, 203);
@@ -81,21 +84,46 @@ body {
 }
 
 
+.final {
+  display: flex;
+  width: 1000px;
+
+
+
+}
+
 button {
   cursor: pointer;
-  margin-top: 60px;
+  margin: 40px;
   align-self: center;
   border: #ffcc00 solid 5px;
   border-radius: 15px;
   width: 160px;
   height: 60px;
-  font-size: x-large;
+  font-size: 22px;
+  font-family: 'Poppins';
 }
 
-.score {
-  border: #ffcc00 dashed 8px;
-  width: 80px;
-  height: 90px;
+.refresh {
+  cursor: pointer;
+  margin: 40px;
+  align-self: center;
+  border: #00ff55 solid 5px;
+  border-radius: 15px;
+  width: 100px;
+  height: 60px;
+  font-size: 22px;
+  display: none;
+}
+
+#score {
+  margin: 0 auto;
+  font-size: 60px;
+  color: white;
+  height: 80px;
+  align-self: center;
+  -webkit-text-stroke: 1px red;
+  text-shadow: #444 5px 5px 5px;
 }
 
 /* Extras */
