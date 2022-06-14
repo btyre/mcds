@@ -94,28 +94,28 @@ let questions = [
     selected: null,
     text: 'Customer wants to know if they are on auto-ship for filters.    '
   },
-  
+
 ];
 
 function computeResults() {
   let scoreCorrect = 0;
   console.log(questions);
-  questions.forEach(el=>{
-    if(el.correct == el.selected){
+  questions.forEach(el => {
+    if (el.correct == el.selected) {
       scoreCorrect++;
     }
   });
   console.log(scoreCorrect);
-  let total = (scoreCorrect/questions.length)*100;
+  let total = (scoreCorrect / questions.length) * 100;
   document.getElementById('score').innerHTML = `${total}%`;
 }
 
-function clickCorrect(event){
+function clickCorrect(event) {
   console.log('clickCorrect', event);
   event.target.classList.add('grgrg');
 }
 
-function clickWrong(event){
+function clickWrong(event) {
   console.log('clickWrong');
 }
 
@@ -128,10 +128,10 @@ window.addEventListener('load', (event) => {
     listQuestions.innerHTML += ` <div class="card1">
                                     <div class="image_group">
                                       <div  class="image_item" >
-                                        <img class="correct" id="c_${index}" src="../McDs_Quiz/img/McDs_Group.png">
+                                        <img class="correct" id="c_${index}" src="../McDs_Quiz/img/McDs_Group.png" width="55px">
                                       </div>
                                       <div  class="image_item" >
-                                        <img class="wrong" id="w_${index}" src="../McDs_Quiz/img/McDs_No_Group.png">
+                                        <img class="wrong" id="w_${index}" src="../McDs_Quiz/img/McDs_No_Group.png" width="55px">
                                       </div>
                                     </div>
                                     <div class="question-area">
@@ -140,37 +140,37 @@ window.addEventListener('load', (event) => {
                                   </div>`;
   });
 
-let listCorrect  = document.getElementsByClassName('correct');
-let listWrong = document.getElementsByClassName('wrong');
+  let listCorrect = document.getElementsByClassName('correct');
+  let listWrong = document.getElementsByClassName('wrong');
 
-for(let i = 0; i< listCorrect.length; i++){
-  console.log(listCorrect[i]);
-  listCorrect[i].addEventListener('click',(event)=>{
-    let index = event.target.id.substring(2);
-//console.log(index);
-    event.target.classList.add('selected_img');
-    listWrong[index].classList.remove('selected_img');
-//console.log(event.target);
+  for (let i = 0; i < listCorrect.length; i++) {
+    console.log(listCorrect[i]);
+    listCorrect[i].addEventListener('click', (event) => {
+      let index = event.target.id.substring(2);
+      //console.log(index);
+      event.target.classList.add('selected_img');
+      listWrong[index].classList.remove('selected_img');
+      //console.log(event.target);
 
-    questions[index].selected = 1;
-  });
-}
-
-
-for(let i = 0; i< listWrong.length; i++){
-  console.log(listWrong[i]);
-  listWrong[i].addEventListener('click',(event)=>{
-    let index = event.target.id.substring(2);
-    //.log(index);
-    event.target.classList.add('selected_img');
-    listCorrect[index].classList.remove('selected_img');
-    //console.log(event.target);
-
-    questions[index].selected = 2;
-  });
+      questions[index].selected = 1;
+    });
+  }
 
 
-}
+  for (let i = 0; i < listWrong.length; i++) {
+    console.log(listWrong[i]);
+    listWrong[i].addEventListener('click', (event) => {
+      let index = event.target.id.substring(2);
+      //.log(index);
+      event.target.classList.add('selected_img');
+      listCorrect[index].classList.remove('selected_img');
+      //console.log(event.target);
+
+      questions[index].selected = 2;
+    });
+
+
+  }
 
 
 
